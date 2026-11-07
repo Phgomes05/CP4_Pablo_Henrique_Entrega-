@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimídia - Pablo Henrique</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="pagina-multimidia">
+    <header>
+        <h1>Multimídia</h1>
+        <p>Vídeo, áudio e conteúdo incorporado</p>
+    </header>
+
+    <nav aria-label="Navegação principal">
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="curriculo.html">Currículo</a></li>
+            <li><a href="formulario.html">Formulário</a></li>
+            <li><a href="multimidia.html">Multimídia</a></li>
+            <li><a href="graficos.html">Gráficos</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="media-grid">
+        <section>
+            <h2>Áudio local</h2>
+            <div class="media-box">
+                <p>Exemplo de mídia local incluída no projeto:</p>
+                <audio controls>
+                    <source src="WhatsApp Ptt 2026-09-12 at 18.36.30 (1).ogg" type="audio/ogg">
+                    Seu navegador não suporta o elemento de áudio.
+                </audio>
+            </div>
+        </section>
+
+        <section>
+            <h2>Vídeo local</h2>
+            <div class="media-box">
+                <p>Vídeo enviado no WhatsApp incluído no projeto:</p>
+                <video controls width="100%" preload="metadata">
+                    <source src="WhatsApp Video 2026-09-12 at 18.47.09 (1).mp4" type="video/mp4">
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
+            </div>
+        </section>
+
+        <section>
+            <h2>Vídeo do YouTube</h2>
+            <div class="media-box">
+                <iframe
+                    src="https://www.youtube.com/embed/vVWaxNf4le8"
+                    title="Vídeo do YouTube"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+                <p>
+                    <a href="https://www.youtube.com/watch?v=vVWaxNf4le8"
+                       target="_blank" rel="noopener noreferrer">Assistir no YouTube</a>
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Observação sobre os arquivos originais</h2>
+            <p>
+                Os arquivos fornecidos no exercício foram identificados como
+                <strong>WhatsApp Video 2026-08-19 at 19.24.30.mp4</strong> e
+                <strong>WhatsApp Ptt 2026-08-17 at 16.32.15.ogg</strong>.
+                Caso queira usar exatamente essas mídias, coloque os arquivos na pasta
+                <strong>midia</strong> e substitua o nome do arquivo no HTML.
+            </p>
+        </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Pablo Henrique Silva Gomes.</p>
+    </footer>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
