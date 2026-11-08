@@ -1,35 +1,46 @@
-# Portfólio pessoal — CP3
+# Portfólio pessoal — CP4
 
-Projeto evoluído a partir do CP2. As cinco páginas obrigatórias estão interligadas:
+Versão consolidada do site pessoal, com cinco páginas integradas:
 `index.html`, `curriculo.html`, `formulario.html`, `multimidia.html` e `graficos.html`.
 
+## O que foi consolidado no CP4
+- Continuidade da estrutura HTML e do conteúdo desenvolvido nos checkpoints anteriores.
+- Layout responsivo com CSS próprio (mobile-first, Flexbox e Grid).
+- Bootstrap 5.3.3 integrado por CDN. Classes utilizadas incluem `container`, `nav`, `nav-pills`, `nav-link`, `btn`, `btn-primary`, `form-control`, `form-select`, `table`, `table-striped` e `table-responsive`.
+- Feature JavaScript: salvar/remover interesses na página inicial, com persistência em `localStorage` após atualizar a página.
+- Formulário com validação JavaScript e demonstração de armazenamento local. O formulário não envia dados para um servidor.
+- Ajustes de acessibilidade: link para pular ao conteúdo, textos alternativos, navegação semântica, indicação da página atual, foco visível, alvos de interação confortáveis e suporte a `prefers-reduced-motion`.
+
 ## Estrutura
-- `css/estilos.css`: estilos do site.
-- `js/scripts.js`: interatividade, validação e persistência em `localStorage`.
-- mídias locais: áudio, vídeo e imagem incluídos no projeto.
+- `css/estilos.css`: estilos e ajustes responsivos/acessíveis.
+- `js/scripts.js`: interatividade, validação e persistência.
+- `programacao.svg`: ilustração da página inicial.
+- arquivos de áudio e vídeo: exemplos da página Multimídia.
 
-## Funcionalidades CP3
-- Seleção de interesses na página inicial, salva no navegador.
-- Formulário com validação JavaScript e feedback visível.
-- Último contato demonstrativo salvo em `localStorage`. Nenhum dado é enviado a um servidor.
+## Publicação no GitHub Pages
+1. Envie o conteúdo desta pasta para a raiz do repositório.
+2. Em GitHub → Settings → Pages, configure a publicação pela branch `main`, pasta `/ (root)`.
+3. Aguarde o deploy e teste o endereço `https://...` em janela anônima.
+4. Navegue pelas cinco páginas e teste o formulário e os interesses salvos.
 
-## Publicar no GitHub Pages
-1. Crie um repositório público no GitHub.
-2. Envie o conteúdo desta pasta para a raiz do repositório.
-3. Em **Settings → Pages**, escolha **Deploy from a branch**, branch `main`, pasta `/ (root)` e salve.
-4. Aguarde o GitHub Pages publicar. A URL será `https://SEU-USUARIO.github.io/NOME-DO-REPOSITORIO/`.
-5. Abra a URL em janela anônima e teste as cinco páginas e os links internos.
-
-## Enviar o repositório ao GitHub
-Esta pasta já contém dois commits e a tag `cp3-entrega`. Crie um repositório vazio no GitHub (sem README, licença ou `.gitignore`) e execute dentro desta pasta:
+## Criar a tag de entrega
+Execute na pasta do repositório:
 
 ```bash
-git branch -M main
-git remote add origin https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git
-git push -u origin main
-git push origin cp3-entrega
+git add .
+git commit -m "feat: consolidar versao final CP4"
+git tag -a cp4-entrega -m "Entrega final CP4"
+git push origin main
+git push origin cp4-entrega
 ```
 
-Depois, em **Settings → Pages**, escolha **Deploy from a branch**, branch `main`, pasta `/ (root)` e salve. Aguarde a publicação. A URL será `https://SEU-USUARIO.github.io/SEU-REPOSITORIO/`.
+Se a tag já existir localmente, confira antes de recriá-la com `git tag`.
 
-Abra a URL em uma janela anônima e teste as cinco páginas, a navegação interna, o formulário e os interesses salvos. O formulário é demonstrativo: valida e salva localmente, mas não envia e-mail nem transmite os dados para um servidor.
+## Demonstração da persistência
+1. Abra `index.html` no site publicado.
+2. Clique em “Salvar interesse” em um ou mais cards.
+3. Atualize a página com F5: os interesses continuam marcados.
+4. Para evidenciar o armazenamento, abra DevTools → Application → Local Storage → domínio do site e procure `pabloPortfolioInteresses`.
+
+## Observação
+O Bootstrap é carregado pela CDN oficial; portanto, a integração visual do Bootstrap depende de conexão com a internet. O CSS próprio continua responsável pela identidade visual do portfólio.
